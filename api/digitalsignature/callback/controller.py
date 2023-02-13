@@ -18,4 +18,4 @@ ServiceCallback = ServiceCallback()
 
 @router.post("/regis")
 async def UploadDokumen(payload: schemas.callback, Authorize: AuthJWT = Depends(), db: Session = Depends(get_db)):
-    return await ServiceCallback.regis(Authorize, payload, db)
+    return await ServiceCallback.regis(Authorize, payload, db) 
